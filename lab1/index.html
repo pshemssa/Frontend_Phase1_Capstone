@@ -7,21 +7,23 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 min-h-screen flex flex-col">
-    <!-- Navigation Bar -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4">
             <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-2">
-                    <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                     <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
                     </svg>
-                    <span class="text-2xl font-bold text-gray-800">Book Explorer</span>
+                    <span class="text-2xl font-bold text-gray-900">Book Explorer</span>
                 </div>
                 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="index.html" class="text-blue-600 font-semibold hover:text-blue-700 transition">Home</a>
-                    <a href="favorites.html" class="text-gray-600 hover:text-blue-600 transition">Favorites</a>
+                    <a href="favorites.html" class="text-gray-600 hover:text-blue-600 transition flex items-center gap-2">
+                        Favorites
+                        <span id="nav-favorites-badge" class="hidden bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-full">0</span>
+                    </a>
                     <a href="about.html" class="text-gray-600 hover:text-blue-600 transition">About</a>
                 </div>
                 
@@ -43,28 +45,57 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-16 md:py-24">
-        <div class="container mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Discover Your Next Great Read</h1>
-            <p class="text-lg md:text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Explore thousands of books, save your favorites, and find the perfect story for you.</p>
-            
-            <!-- Search Bar -->
-            <div class="max-w-2xl mx-auto">
-                <div class="flex flex-col sm:flex-row gap-2">
-                    <input 
-                        type="text" 
-                        id="search-input"
-                        placeholder="Search for books by title, author, or topic..." 
-                        class="flex-1 px-4 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300"
-                    >
-                    <button 
-                        id="search-btn"
-                        class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold px-8 py-3 rounded-lg transition"
-                    >
-                        Search
-                    </button>
+    <section class=" Hero relative text-white " style="background-image: url('../coffee.jpg'); background-size: cover; background-position: center;">
+        <!-- Decorative Elements -->
+        <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+        <div class="absolute top-0 left-0 w-64 h-64 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+        <div class="absolute top-0 right-0 w-64 h-64 bg-indigo-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+        <div class="absolute bottom-0 left-1/2 w-64 h-64 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
+        
+        <div class="container mx-auto px-4 py-20 md:py-32 relative">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight">
+                    Discover Your Next <br class="hidden md:block"/>
+                    <span class="text-yellow-300">Great Read</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed">
+                    Explore thousands of books, save your favorites, and find the perfect story for you.
+                </p>
+                
+                <!-- Search Bar -->
+                <div class="max-w-3xl mx-auto pb-2">
+                    <div class="relative bg-white rounded-2xl shadow-2xl overflow-hidden">
+                        <input 
+                            type="text" 
+                            id="search-input"
+                            placeholder="Search for books by title, author, or topic..." 
+                            class="w-full px-6 py-5 pr-40 text-gray-800 text-lg focus:outline-none"
+                        >
+                        <button 
+                            id="search-btn"
+                            class="absolute right-2 top-2 bottom-2 bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold px-8 rounded-xl transition transform hover:scale-105 shadow-lg"
+                        >
+                            Search
+                        </button>
+                    </div>
                 </div>
+                 
             </div>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center ">
+                <a href="index.html" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full">
+                    Browse Books
+                </a>
+                <a href="favorites.html" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-full transition">
+                    View Favorites
+                </a>
+            </div>
+        </div>
+          
+        <!-- Bottom Wave -->
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full">
+                <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="#F9FAFB"/>
+            </svg>
         </div>
     </section>
 
@@ -216,7 +247,7 @@
             document.querySelectorAll('.add-favorite-btn').forEach(btn => {
                 btn.addEventListener('click', (e) => {
                     const book = JSON.parse(e.target.getAttribute('data-book'));
-                    alert(`"${book.title}" will be added to favorites (Lab 2)`);
+                    alert(`"${book.title}" is added to favorites`);
                 });
             });
         }
@@ -228,7 +259,7 @@
         document.getElementById('search-btn').addEventListener('click', () => {
             const query = document.getElementById('search-input').value;
             if (query.trim()) {
-                alert(`Search functionality will be implemented in Lab 3. Searching for: "${query}"`);
+                alert(`Search functionality will be implemented. Searching for: "${query}"`);
             }
         });
 
