@@ -11,20 +11,18 @@
         <div class="container mx-auto px-4 py-4">
             <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-2">
-                     <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                     <svg class="w-8 h-8 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
                     </svg>
-                    <span class="text-2xl font-bold text-gray-900">Book Explorer</span>
+                    <span class="text-2xl font-bold text-pink-600">Book Explorer</span>
                 </div>
                 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-blue-600 font-semibold hover:text-blue-700 transition">Home</a>
-                    <a href="favorites.html" class="text-gray-600 hover:text-blue-600 transition flex items-center gap-2">
+                    <a href="index.html" class="text-pink-600 font-semibold hover:underline">Home</a>
+                    <a href="favorites.html" class="text-pink-600 font-semibold hover:underline flex items-center gap-2">
                         Favorites
-                        <span id="nav-favorites-badge" class="hidden bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-full">0</span>
-                    </a>
-                    <a href="about.html" class="text-gray-600 hover:text-blue-600 transition">About</a>
+                    <a href="about.html" class="text-pink-600 font-semibold hover:underline ">About</a>
                 </div>
                 
                 <!-- Mobile Menu Button -->
@@ -37,7 +35,7 @@
             
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 space-y-2">
-                <a href="index.html" class="block text-blue-600 font-semibold py-2 px-4 rounded hover:bg-blue-50 transition">Home</a>
+                <a href="index.html" class="block text-blue-600 font-semibold py-2 px-4 rounded hover:underline transition">Home</a>
                 <a href="favorites.html" class="block text-gray-600 py-2 px-4 rounded hover:bg-blue-50 transition">Favorites</a>
                 <a href="about.html" class="block text-gray-600 py-2 px-4 rounded hover:bg-blue-50 transition">About</a>
             </div>
@@ -45,18 +43,12 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class=" Hero relative text-white " style="background-image: url('../Images/coffee.jpg'); background-size: cover; background-position: center;">
-        <!-- Decorative Elements -->
-        <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
-        <div class="absolute top-0 left-0 w-64 h-64 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
-        <div class="absolute top-0 right-0 w-64 h-64 bg-indigo-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
-        <div class="absolute bottom-0 left-1/2 w-64 h-64 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
-        
-        <div class="container mx-auto px-4 py-20 md:py-32 relative">
+    <section class="Hero relative text-white" style="background-image: url('../Images/bright.jpg'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(3, 3, 3, 0.3);"> 
+        <div class="container mx-auto px-4 py-8 md:py-20 relative">
             <div class="text-center max-w-4xl mx-auto">
-                <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
                     Discover Your Next <br class="hidden md:block"/>
-                    <span class="text-yellow-300">Great Read</span>
+                    <span class="text-amber-200">Great Read</span>
                 </h1>
                 <p class="text-xl md:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed">
                     Explore thousands of books, save your favorites, and find the perfect story for you.
@@ -73,24 +65,23 @@
                         >
                         <button 
                             id="search-btn"
-                            class="absolute right-2 top-2 bottom-2 bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold px-8 rounded-xl transition transform hover:scale-105 shadow-lg"
+                            class="absolute right-2 top-2 bottom-2 bg-amber-200 hover:bg-yellow-200 text-gray-900 font-bold px-8 rounded-xl transition transform hover:scale-105 shadow-lg"
                         >
                             Search
                         </button>
                     </div>
                 </div>
-                 
-            </div>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center ">
-                <a href="#loading" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full">
+           
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8 pb-4">
+                <a href="#books-grid" class="bg-pink-400 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full">
                     Browse Books
                 </a>
-                <a href="favorites.html" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-full transition">
+                <a href="favorites.html" class="bg-red-300  hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-full transition">
                     View Favorites
                 </a>
             </div>
         </div>
-          
+          </div>
         <!-- Bottom Wave -->
         <div class="absolute bottom-0 left-0 right-0">
             <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full">
@@ -101,9 +92,14 @@
 
     <!-- Main Content -->
     <main class="flex-1 container mx-auto px-4 py-8">
-        <div class="mb-6">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2">Popular Books</h2>
-            <p class="text-gray-600">Browse our collection of amazing books</p>
+        <div class="mb-6 flex items-center justify-between">
+            <div>
+                <h2 id="results-title" class="text-2xl md:text-3xl font-bold text-gray-800 mb-2">Popular Books</h2>
+                <p id="results-subtitle" class="text-gray-600">Browse our collection of amazing books</p>
+            </div>
+            <button id="clear-search-btn" class="hidden bg-gray-500 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded transition">
+                Clear Search
+            </button>
         </div>
 
         <!-- Loading Spinner -->
@@ -119,9 +115,136 @@
             <p class="text-xl text-gray-600">No books found. Try a different search!</p>
         </div>
 
-        <!-- Books Grid (Exercise 1.2 & 1.3) -->
-        <div id="books-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            <!-- Book cards will be populated here -->
+        <!-- Books Grid -->
+        <div id="books-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-full">
+            <!-- Hardcoded Card -->
+            <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden w-full">
+                <div class="aspect-w-2 aspect-h-3 bg-gray-200">
+                    <img 
+                        src="../Images/cold light.jpg" 
+                        alt="Cold Light"
+                        class="w-full h-48 sm:h-56 md:h-64 object-cover">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg sm:text-xl text-gray-800 mb-1 line-clamp-2">Cold Light</h3>
+                    <p class="text-gray-600 text-sm sm:text-sm mb-2">Jane</p>
+                    <p class="text-gray-500 text-xs mb-3">2021</p>
+                    <button 
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 sm:py-2.5 sm:px-6 rounded transition"
+                    >
+                        Add to Favorites
+                    </button>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden w-full">
+                <div class="aspect-w-2 aspect-h-3 bg-gray-200">
+                    <img 
+                        src="../Images/It ends with us.jpg" 
+                        alt="Cold Light"
+                        class="w-full h-48 sm:h-56 md:h-64 object-cover">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg sm:text-xl text-gray-800 mb-1 line-clamp-2">It ends with us</h3>
+                    <p class="text-gray-600 text-sm sm:text-sm mb-2">Kurt Castiel</p>
+                    <p class="text-gray-500 text-xs mb-3">2021</p>
+                    <button 
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 sm:py-2.5 sm:px-6 rounded transition"
+                    >
+                        Add to Favorites
+                    </button>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden w-full">
+                <div class="aspect-w-2 aspect-h-3 bg-gray-200">
+                    <img 
+                        src="../Images/Love triangle.jpg" 
+                        alt="Cold Light"
+                        class="w-full h-48 sm:h-56 md:h-64 object-cover">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg sm:text-xl text-gray-800 mb-1 line-clamp-2">Love triangle</h3>
+                    <p class="text-gray-600 text-sm sm:text-sm mb-2">kursten parker</p>
+                    <p class="text-gray-500 text-xs mb-3">2021</p>
+                    <button 
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 sm:py-2.5 sm:px-6 rounded transition"
+                    >
+                        Add to Favorites
+                    </button>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden w-full">
+                <div class="aspect-w-2 aspect-h-3 bg-gray-200">
+                    <img 
+                        src="../Images/resurrected.jpg" 
+                        alt="Cold Light"
+                        class="w-full h-48 sm:h-56 md:h-64 object-cover">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg sm:text-xl text-gray-800 mb-1 line-clamp-2">resurrected</h3>
+                    <p class="text-gray-600 text-sm sm:text-sm mb-2">Pr. John</p>
+                    <p class="text-gray-500 text-xs mb-3">2021</p>
+                    <button 
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 sm:py-2.5 sm:px-6 rounded transition"
+                    >
+                        Add to Favorites
+                    </button>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden w-full">
+                <div class="aspect-w-2 aspect-h-3 bg-gray-200">
+                    <img 
+                        src="../Images/Takeme Home.jpg" 
+                        alt="Cold Light"
+                        class="w-full h-48 sm:h-56 md:h-64 object-cover">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg sm:text-xl text-gray-800 mb-1 line-clamp-2">Take me Home</h3>
+                    <p class="text-gray-600 text-sm sm:text-sm mb-2">Jane</p>
+                    <p class="text-gray-500 text-xs mb-3">2021</p>
+                    <button 
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 sm:py-2.5 sm:px-6 rounded transition"
+                    >
+                        Add to Favorites
+                    </button>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden w-full">
+                <div class="aspect-w-2 aspect-h-3 bg-gray-200">
+                    <img 
+                        src="../Images/Lost Orphan.jpg" 
+                        alt="Cold Light"
+                        class="w-full h-48 sm:h-56 md:h-64 object-cover">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg sm:text-xl text-gray-800 mb-1 line-clamp-2">Lost Orphan</h3>
+                    <p class="text-gray-600 text-sm sm:text-sm mb-2">Jane</p>
+                    <p class="text-gray-500 text-xs mb-3">2021</p>
+                    <button 
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 sm:py-2.5 sm:px-6 rounded transition"
+                    >
+                        Add to Favorites
+                    </button>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden w-full">
+                <div class="aspect-w-2 aspect-h-3 bg-gray-200">
+                    <img 
+                        src="../Images/Adventurous Hindi.jpg" 
+                        alt="Cold Light"
+                        class="w-full h-48 sm:h-56 md:h-64 object-cover">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg sm:text-xl text-gray-800 mb-1 line-clamp-2">Adventurous Hindi</h3>
+                    <p class="text-gray-600 text-sm sm:text-sm mb-2">Jane</p>
+                    <p class="text-gray-500 text-xs mb-3">2021</p>
+                    <button 
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 sm:py-2.5 sm:px-6 rounded transition"
+                    >
+                        Add to Favorites
+                    </button>
+                </div>
+            </div>
+            <!-- Other book cards would be here if JavaScript were present -->
         </div>
     </main>
 
@@ -155,119 +278,5 @@
             </div>
         </div>
     </footer>
-
-    <script type="module">
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Placeholder book data (will be replaced with API data in Lab 3)
-        const placeholderBooks = [
-            {
-                id: '1',
-                title: 'The Great Gatsby',
-                author: 'F. Scott Fitzgerald',
-                cover: 'https://covers.openlibrary.org/b/id/7222246-L.jpg',
-                year: 1925
-            },
-            {
-                id: '2',
-                title: 'To Kill a Mockingbird',
-                author: 'Harper Lee',
-                cover: 'https://covers.openlibrary.org/b/id/8225261-L.jpg',
-                year: 1960
-            },
-            {
-                id: '3',
-                title: '1984',
-                author: 'George Orwell',
-                cover: 'https://covers.openlibrary.org/b/id/7222246-L.jpg',
-                year: 1949
-            },
-            {
-                id: '4',
-                title: 'Pride and Prejudice',
-                author: 'Jane Austen',
-                cover: 'https://covers.openlibrary.org/b/id/8235892-L.jpg',
-                year: 1813
-            },
-            {
-                id: '5',
-                title: 'The Catcher in the Rye',
-                author: 'J.D. Salinger',
-                cover: 'https://covers.openlibrary.org/b/id/8220635-L.jpg',
-                year: 1951
-            },
-            {
-                id: '6',
-                title: 'The Hobbit',
-                author: 'J.R.R. Tolkien',
-                cover: 'https://covers.openlibrary.org/b/id/8482820-L.jpg',
-                year: 1937
-            }
-        ];
-
-        // Function to create book card HTML
-        function createBookCard(book) {
-            return `
-                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-                    <div class="aspect-w-2 aspect-h-3 bg-gray-200">
-                        <img 
-                            src="${book.cover}" 
-                            alt="${book.title}"
-                            class="w-full h-64 object-cover"
-                            onerror="this.src='https://via.placeholder.com/300x400?text=No+Cover'"
-                        >
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg text-gray-800 mb-1 line-clamp-2">${book.title}</h3>
-                        <p class="text-gray-600 text-sm mb-2">${book.author}</p>
-                        <p class="text-gray-500 text-xs mb-3">${book.year}</p>
-                        <button 
-                            class="add-favorite-btn w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition"
-                            data-book='${JSON.stringify(book)}'
-                        >
-                            Add to Favorites
-                        </button>
-                    </div>
-                </div>
-            `;
-        }
-
-        // Render books on page load
-        function renderBooks(books) {
-            const grid = document.getElementById('books-grid');
-            grid.innerHTML = books.map(book => createBookCard(book)).join('');
-            
-            // Add event listeners to favorite buttons
-            document.querySelectorAll('.add-favorite-btn').forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    const book = JSON.parse(e.target.getAttribute('data-book'));
-                    alert(`"${book.title}" is added to favorites`);
-                });
-            });
-        }
-
-        // Initial render with placeholder data
-        renderBooks(placeholderBooks);
-
-        // Search functionality placeholder (will be enhanced in Lab 3)
-        document.getElementById('search-btn').addEventListener('click', () => {
-            const query = document.getElementById('search-input').value;
-            if (query.trim()) {
-                alert(`Search functionality will be implemented. Searching for: "${query}"`);
-            }
-        });
-
-        document.getElementById('search-input').addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                document.getElementById('search-btn').click();
-            }
-        });
-    </script>
 </body>
 </html>
