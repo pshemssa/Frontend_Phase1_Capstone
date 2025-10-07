@@ -21,7 +21,7 @@ A modern, responsive web application for discovering and saving your favorite bo
 2. Open `index.html` in your browser
 3. Start exploring books!
 
-### Option 2: Open hosted link
+### Option 2: Open hosted link : https://bookexplorerr.netlify.app/ 
 
 ## 📁 Project Structure
 
@@ -106,4 +106,4 @@ This project demonstrates:
 
 ## 🚀 Deployment
 
-4. this site is live at `https://username.github.io/book-explorer/`
+4. this site is live at https://bookexplorerr.netlify.app/ 
