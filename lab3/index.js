@@ -22,7 +22,7 @@
         }
 
         // Fetch trending/popular books
-        async function fetchTrendingBooks(subject = 'fiction', limit = 20) {
+        async function fetchTrendingBooks(subject = 'popular', limit = 20) {
             try {
                 const response = await fetch(
                     `${API_BASE_URL}/subjects/${subject}.json?limit=${limit}`
