@@ -105,9 +105,9 @@
         // Show notification
         function showNotification(message, type = 'info') {
             const colors = {
-                success: 'bg-green-500',
+                success: 'bg-pink-500',
                 error: 'bg-red-500',
-                info: 'bg-blue-500'
+                info: 'bg-pink-500'
             };
             
             const notification = document.createElement('div');

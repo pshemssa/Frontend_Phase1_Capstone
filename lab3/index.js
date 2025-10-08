@@ -180,7 +180,7 @@
         function showLoading() {
             loading.classList.remove('hidden');
             booksGrid.classList.add('hidden');
-            noResults.classList.add('hidden');
+            noResults.classList.add('hidden');  
             errorMessage.classList.add('hidden');
         }
 
